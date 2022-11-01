@@ -15,7 +15,7 @@
 		var average = total / days_past;
 		var days_available_total = 1791;
 		var projection = average * days_available_total;
-		var text1 = Math.round(total*100)/100 + "h  |  " + Math.round(average*100)/100 + "h => " + Math.round((10000 / (days_available_total - days_past))*100)/100 + "h  |  " + Math.round(projection*1)/1 + "h " + " ";
+		var text1 = Math.round(total*100)/100 + "h  |  " + Math.round(average*100)/100 + "h => " + Math.round((10000 / (days_available_total - days_past))*100)/100 + "h  |  " + Math.round(projection*1)/1 + "d " + " ";
 		window.onload = function () {
 		var chart = new CanvasJS.Chart("chartContainer",
 		{
