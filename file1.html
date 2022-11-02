@@ -18,7 +18,7 @@
 		var time_spent_studying_today = Math.round(total*100)/100;
 		var average_past_daily_time_spent_studying = Math.round(average*100)/100;
 		var necessary_time_spent_studying = Math.round((10000 / (days_available_total - days_past))*100)/100;
-		var time_poor = Math.round((((10000-total) - (average_past_daily_time_spent_studying*days_left)) * -1) / average_past_daily_time_spent_studying);
+		var time_poor = Math.round((days_available_total - days_past)-(10000/average));
 		var text1 = time_spent_studying_today + "h  |  " + average_past_daily_time_spent_studying + "h => " + necessary_time_spent_studying + "h  |  " + time_poor + "d";
 		window.onload = function () {
 		var chart = new CanvasJS.Chart("chartContainer",
