@@ -1,80 +1,9 @@
 <!DOCTYPE HTML>
 <html>
-	<head>  
-		<script type="text/javascript">
-
-		// RELEVANT (1/3)
-		var a1 = 1.31;
-		var a2 = 2.24;
-
-		// RELEVANT (2/3)
-		var total = a2 + a1;
-		var days_past = 2;
-
-		var average = total / days_past;
-		var days_available_total = 1791;
-		var days_left = days_available_total - days_past;
-		var time_spent_studying_today = Math.round(total*100)/100;
-		var average_past_daily_time_spent_studying = Math.round(average*100)/100;
-		var necessary_time_spent_studying = Math.round((10000 / (days_available_total - days_past))*100)/100;
-		var time_poor = Math.round((days_available_total - days_past)-(10000/average));
-		var text1 = time_spent_studying_today + "h  |  " + average_past_daily_time_spent_studying + "h => " + necessary_time_spent_studying + "h  |  " + time_poor + "d";
-		window.onload = function () {
-		var chart = new CanvasJS.Chart("chartContainer",
-		{
-			title: {
-				text: text1,
-				fontSize: 30,
-				fontWeight: "bold",
-			},
-			axisX:{
-				valueFormatString: "DD-MMM" ,
-				interval: 10,
-				intervalType: "day",
-				labelAngle: -50,
-				labelFontColor: "rgb(0,75,141)",
-				minimum: new Date(2022,10,1),
-				},
-			axisY: {
-				title: "time spent studying (hours)",
-				tickColor: "azure",
-				titleFontColor: "rgb(0,75,141)",
-				titleFontSize: 13,
-				},
-			data: [
-				{   
-					indexLabelFontColor: "darkSlateGray",
-					name: "views",
-					type: "area",
-					color: "rgba(0,75,141,0.7)",
-					markerSize:15,
-					dataPoints:
-					[
-
-						// RELEVANT (3/3)
-						{ x: new Date(2022,9,31), y: 0},
-						{ x: new Date(2022,10,1), y: a1, indexLabel:'' + a1},
-						{ x: new Date(2022,10,2), y: a2, indexLabel:'' + a2},
-					]
-				}			
-			]
-			});
-	chart.render();
-	}
-	</script>
-	<script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+	<head>
+		Intellligence is the pinnacle of Search
 	</head>
 	<body>
-		<div id="chartContainer" style="height: 700px; width: 100%;">
-		</div>
+		<a href="https://alexspaceee.github.io/thoughts.html">thoughts<br></a>
 	</body>
-<div style="text-align:center">    
-	<a href="https://alexspaceee.github.io/file1.html">______________<br></a>
-	<a href="https://alexspaceee.github.io/file1.html">____________<br></a>
-	<a href="https://alexspaceee.github.io/file1.html">_________<br></a>
-	<a href="https://alexspaceee.github.io/file1.html">_____<br></a>
-	<a href="https://alexspaceee.github.io/file1.html">_________<br></a>
-	<a href="https://alexspaceee.github.io/file1.html">____________<br></a>
-	<a href="https://alexspaceee.github.io/file1.html">______________<br></a>
-</div>
 </html>
