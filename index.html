@@ -4,18 +4,15 @@
 		<script type="text/javascript">
 
 		// RELEVANT (1/3)
-		var a1 = 1.31;
-		var a2 = 2.24;
-		var a3 = 0;
-		var a4 = 0;
-		var a5 = 0;
+		var a1 = 0;
+		//var a2 = 0;
 
 		// RELEVANT (2/3)
-		var total = a5+a4+a3+a2+a1;
-		var days_past = 5;
+		var total = a1;
+		var days_past = 1;
 
 		var average = total / days_past;
-		var days_available_total = 1061;
+		var days_available_total = 1056;
 		var days_left = days_available_total - days_past;
 		var time_spent_studying_today = Math.round(total*100)/100;
 		var average_past_daily_time_spent_studying = Math.round(average*100)/100;
@@ -36,7 +33,7 @@
 				intervalType: "day",
 				labelAngle: -50,
 				labelFontColor: "rgb(1000,1000,1000)",
-				minimum: new Date(2022,10,1),
+				minimum: new Date(2022,10,6),
 				},
 			axisY: {
 				title: "time spent studying (hours)",
@@ -56,12 +53,8 @@
 						
 						// template: { x: new Date(2022,10,1), y: a1, indexLabel:'' + a1},
 						// RELEVANT (3/3)
-						{ x: new Date(2022,9,31), y: 0},
-						{ x: new Date(2022,10,1), y:a1},
-						{ x: new Date(2022,10,2), y:a2},
-						{ x: new Date(2022,10,3), y:a3},
-						{ x: new Date(2022,10,4), y:a4},
-						{ x: new Date(2022,10,5), y:a5},
+						{ x: new Date(2022,9,5), y: 0},
+						{ x: new Date(2022,10,6), y:a1},
 					]
 				}			
 			]
