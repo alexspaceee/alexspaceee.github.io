@@ -4,26 +4,21 @@
 		<script type="text/javascript">
 
 		// RELEVANT (1/3)
-		var a1 = 1;
-		//var a2 = 0;
+		var a1 = 24;
+		var a2 = 24;
 
 		// RELEVANT (2/3)
-		var total = a1;
-		var days_past = 1;
+		var total = a2 + a1;
+		var days_past = 2;
+		var today = a2;
 
 		var average = total / days_past;
-		var days_available_total = 1056;
-		var days_left = days_available_total - days_past;
-		var time_spent_studying_today = Math.round(total*100)/100;
-		var average_past_daily_time_spent_studying = Math.round(average*100)/100;
-		var necessary_time_spent_studying = Math.round((10000 / (days_available_total - days_past))*100)/100;
-		var time_poor = Math.round((days_available_total - days_past)-(10000/average));
-		var text1 = time_spent_studying_today + "h  |  " + average_past_daily_time_spent_studying + "h => " + necessary_time_spent_studying + "h  |  " + time_poor + "d";
+		var text_y = today + " (" + total + ")";
 		window.onload = function () {
 		var chart = new CanvasJS.Chart("chartContainer",
 		{
 			title: {
-				text: text1,
+				text: text_y,
 				fontSize: 30,
 				fontWeight: "bold",
 			},
@@ -33,10 +28,10 @@
 				intervalType: "day",
 				labelAngle: -50,
 				labelFontColor: "rgb(1000,1000,1000)",
-				minimum: new Date(2022,10,6), // gleich erstem normal ausgefülltem Datum
+				minimum: new Date(2022,12,10), // gleich erstem normal ausgefülltem Datum
 				},
 			axisY: {
-				title: "time spent studying (hours)",
+				title: "time lost",
 				tickColor: "azure",
 				titleFontColor: "rgb(0,75,141)",
 				titleFontSize: 13,
@@ -53,8 +48,9 @@
 						
 						// template: { x: new Date(2022,10,1), y: a1, indexLabel:'' + a1},
 						// RELEVANT (3/3)
-						{ x: new Date(2022,9,5), y: 0},
-						{ x: new Date(2022,10,6), y:a1},
+						{ x: new Date(2022,12,9), y: 0},
+						{ x: new Date(2022,12,10), y:a1},
+						{ x: new Date(2022,12,11), y:a2},
 					]
 				}			
 			]
@@ -69,12 +65,12 @@
 		</div>
 	</body>
 <div style="text-align:center">    
-	<a href="https://alexspaceee.github.io/homepage.html">______________<br></a>
-	<a href="https://alexspaceee.github.io/homepage.html">____________<br></a>
-	<a href="https://alexspaceee.github.io/homepage.html">_________<br></a>
-	<a href="https://alexspaceee.github.io/homepage.html">_____<br></a>
-	<a href="https://alexspaceee.github.io/homepage.html">_________<br></a>
-	<a href="https://alexspaceee.github.io/homepage.html">____________<br></a>
-	<a href="https://alexspaceee.github.io/homepage.html">______________<br></a>
+	<a href="https://alexspaceee.github.io/file.html">______________<br></a>
+	<a href="https://alexspaceee.github.io/file.html">____________<br></a>
+	<a href="https://alexspaceee.github.io/file.html">_________<br></a>
+	<a href="https://alexspaceee.github.io/file.html">_____<br></a>
+	<a href="https://alexspaceee.github.io/file.html">_________<br></a>
+	<a href="https://alexspaceee.github.io/file.html">____________<br></a>
+	<a href="https://alexspaceee.github.io/file.html">______________<br></a>
 </div>
 </html>
